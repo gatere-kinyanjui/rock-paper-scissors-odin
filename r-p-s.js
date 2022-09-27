@@ -28,14 +28,18 @@ function singleRound(playerSelection, computerSelection) {
         console.log("you lose! rock crushes scissors");
     } else (playerSelection.toLowerCase() === "scissors" && computerSelection === "paper");
     console.log("you win! scissors butcher paper");
+
     return singleRound(playerSelection, computerSelection);
+
 }
+
+
 
 // 3. play multiple rounds
 function game() {
     for (let i = 0; i < 5; i++) {
-        console.log(singleRound(playerSelection, computerSelection))
+        singleRound(playerSelection, computerSelection);
     }
+    return game();
 }
 
-return game();
